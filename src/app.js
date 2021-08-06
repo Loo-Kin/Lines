@@ -50,7 +50,7 @@
  * Желаю удачи!
  */
 
-import LinesRenderer from './test.js';
+import LinesRenderer from './linesRenderer.js';
 
 import './scss/style.scss';
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.addEventListener("click", () => {
         try {
             let lines = JSON.parse(linesInput.value);
-
+            
             if(typeof lines[0] !== "object") {
                 linesRenderer.lines = [lines];
                 linesRenderer.colors = [Math.random() * 0xFFFFFF];
